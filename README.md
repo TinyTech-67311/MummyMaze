@@ -1,6 +1,6 @@
 # 🧩 MUMMY MAZE
 
-1. GIỚI THIỆU
+1. GIỚI THIỆU:
 Mummy Maze là một game giải đố mê cung được xây dựng bằng Python và thư viện Pygame.
 Người chơi điều khiển nhân vật Explorer di chuyển trong mê cung, tránh các Enemy,
 sử dụng Key để mở Gate và tìm đường đến Exit để chiến thắng.
