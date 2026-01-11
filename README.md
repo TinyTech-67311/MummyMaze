@@ -106,7 +106,7 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
 1. **Clone repository**
    ```bash
    git clone https://github.com/TinyTech-67311/MummyMaze.git
-   cd MummyMaze/Code
+   cd MummyMaze/source
    ```
 
 2. **Tạo virtual environment** (khuyến nghị)
@@ -117,7 +117,7 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
    . venv/Scripts/activate
    
    # macOS/Linux
-   Code venv/bin/activate
+   source venv/bin/activate
    ```
 
 3. **Cài đặt dependencies**
