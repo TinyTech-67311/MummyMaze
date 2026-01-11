@@ -89,12 +89,8 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
    ```bash
    git clone https://github.com/TinyTech-67311/MummyMaze.git
    cd MummyMaze
+   MummyMaze.exe
    ```
-
-2. **Double-click** vào file `MummyMaze.exe` để chạy game
-
-> ⚠️ **Lưu ý**: Windows Defender có thể cảnh báo khi chạy file `.exe` từ nguồn không xác định. Chọn **"Run anyway"** để tiếp tục. 
-
 ### 🐍 Phương Án 2: Chạy từ Source Code Python
 
 **Yêu cầu:**
