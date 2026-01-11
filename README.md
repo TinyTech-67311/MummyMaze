@@ -1,50 +1,138 @@
-# 🧩 MUMMY MAZE
+# MUMMY MAZE - ĐỒ ÁN MÔN CƠ SỞ LẬP TRÌNH
+> *Một tựa game giải đố chiến thuật được xây dựng với Python và Pygame.*
 
-1. GIỚI THIỆU:
-Mummy Maze là một game giải đố mê cung được xây dựng bằng Python và thư viện Pygame.
-Người chơi điều khiển nhân vật Explorer di chuyển trong mê cung, tránh các Enemy,
-sử dụng Key để mở Gate và tìm đường đến Exit để chiến thắng.
+## 👥 Thành Viên Nhóm
 
-2. CẤU TRÚC BÀI NỘP
-- Toàn bộ mã nguồn được đặt trong thư mục: source/
-- Các thư mục không cần thiết như .vs, .vscode, __pycache__ đã được loại bỏ để giảm dung lượng.
+Dự án được thực hiện bởi nhóm **Nhóm 10** - Khóa K25 - Môn Cơ Sở Lập Trình: 
+- Ngô Phạm Hồng Thức - 25122044
+- Hà Chí Tâm - 25122039
+- Huỳnh Văn Phú - 25122036
+- Đặng Lê Hưng Thịnh - 25122040
 
-- Cấu trúc chính (rút gọn):
-source/
-  + main.py
-  + path_utils.py
-  + game/
-  + ui/
-  + assets/
-  + font/
+## 📖 Giới Thiệu (Overview)
+**Mummy Maze** là dự án tái hiện tựa game giải đố kinh điển của PopCap.  Trong game, người chơi vào vai nhà thám hiểm **Explorer** bị kẹt trong kim tự tháp bí ẩn và phải tìm đường thoát ra ngoài trong khi tránh những xác ướp (Enemy/Mummy) đang rình rập.
 
-3. YÊU CẦU MÔI TRƯỜNG
-- Python phiên bản khuyến nghị: 3.10 hoặc 3.11
-- Hệ điều hành: Windows
-- Thư viện sử dụng: pygame
+Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi của các Enemy theo thuật toán pathfinding, tạo nên những tình huống giải đố đầy thử thách. Game yêu cầu người chơi phải suy nghĩ chiến thuật để tránh bị bắt và tìm ra lối thoát.
 
-4. CÀI ĐẶT
-- Bước 1: Mở Command Prompt (CMD)
-- Bước 2: Di chuyển vào thư mục source: Gõ cd source
+### 🛠 Công Nghệ Sử Dụng
 
-- Bước 3: (Khuyến nghị) Tạo môi trường ảo, gõ:
-  + python -m venv venv
-  + venv\\Scripts\\activate
+| Công nghệ | Phiên bản | Mục đích |
+|-----------|-----------|----------|
+| **Python** | 3.12+ | Ngôn ngữ lập trình chính |
+| **Pygame** | 2.5.2 | Thư viện đồ họa và xử lý game |
+| **Công cụ** | - | Công cụ hỗ trợ code game |
+| **JSON** | Built-in | Lưu trữ dữ liệu user và progress |
+| **Git/GitHub** | - | Quản lý mã nguồn và version control |
 
-- Bước 4: Cài đặt thư viện cần thiết: Gõ pip install pygame
+---
 
-5. CHẠY GAME
-- Trong thư mục source/, chạy lệnh: python main.py
+## ✨ Tính Năng Nổi Bật
 
-6. HƯỚNG DẪN SỬ DỤNG
-- Sử dụng các phím mũi tên (↑ ↓ ← →) để di chuyển Explorer.
-- Mỗi bước đi của người chơi sẽ kéo theo lượt di chuyển của Enemy.
-- Mục tiêu: đưa Explorer đến Stair để chiến thắng, tránh Trap và Enemy.
-- Game hỗ trợ nhiều chức năng cho người dùng tối ưu trải nghiệm.
+### 🎮 Gameplay Features
 
-7. LINK MÃ NGUỒN: 
-https://github.com/TinyTech-67311/MummyMaze.git
+#### 1. **Hệ Thống Di Chuyển**
+- Di chuyển theo 4 hướng: Lên, Xuống, Trái, Phải bằng cách Click chuột hoặc Nhấn phím
+- Mỗi bước đi của Player kích hoạt lượt đi của tất cả Enemy
+- Hệ thống collision detection chính xác
 
-8. GHI CHÚ
-- Đảm bảo chạy chương trình từ đúng thư mục source để tránh lỗi đường dẫn tài nguyên.
+#### 2. **Algorithm Pathfinding**
+- Thuật toán Di chuyển dựa trên chiến lược ưu tiên trục (Tham lam)
+- Thuật toán Di chuyển bám theo người chơi bằng đường đi ngắn nhất (BFS)
+- Thuật toán Di chuyển ngăn người chơi di chuyển đến lối thoát (BFS)
+
+#### 3. **Hệ Thống Game Objects**
+| Đối tượng | Chức năng |
+|-----------|------------|
+| **Explorer** | Nhân vật chính do người chơi điều khiển |
+| **Enemy/Mummy** | Xác ướp tự động truy đuổi người chơi |
+| **Key** | Chìa khóa để mở/đóng Gate |
+| **Gate** | Cửa cần Key để mở/đóng |
+| **Trap** | Bẫy gây thua nếu va phải |
+| **Stair/Exit** | Điểm thoát hiểm để chiến thắng |
+| **Wall** | Tường chắn đường |
+
+### 💾 System Features
+
+#### 4. **User Management System**
+- Hệ thống đăng nhập/đăng ký với username và password
+- Lưu trữ thông tin người dùng trong `users.json`
+- Mỗi user có profile riêng biệt
+
+#### 5. **Progress Tracking**
+- Tự động lưu tiến độ level của người chơi
+- Theo dõi level đã hoàn thành trong `progress.json`
+- Có thể tiếp tục chơi từ level đã đạt được
+
+#### 6. **Undo/Redo System**
+- Sử dụng cấu trúc **Stack** để lưu lịch sử di chuyển
+- Hoàn tác không giới hạn số lượng bước
+- Redo để phục hồi nước đi đã hoàn tác
+
+### 🎨 UI/UX Features
+
+#### 8. **Menu System**
+- Homepage với các tùy chọn: Play, Music Button, Play Button
+- Level Selection để chọn màn chơi
+- Thanh Menu hỗ trợ người chơi: Undo Move, Reset Maze, World Map, Quit Game và Quit to Main
+- Màn hình kết quả với các lựa chọn: Undo Move, Reset Maze, World Map, Quit to Main
+
+#### 9. **Multiple Levels**
+- Nhiều level với độ khó tăng dần
+- Map được thiết kế thủ công, lưu trong `assets/map/`
+- Mỗi level có bố trí Enemy và Trap khác nhau
+
+---
+
+## 🚀 Cách Chạy Game
+
+### 📦 Phương Án 1: Chạy File Executable (Khuyến nghị)
+
+1. **Download** toàn bộ repository hoặc clone về máy: 
+   ```bash
+   git clone https://github.com/TinyTech-67311/MummyMaze.git
+   cd MummyMaze
+   ```
+
+2. **Double-click** vào file `MummyMaze.exe` để chạy game
+
+3. **Đảm bảo** các thư mục `assets/` và `font/` nằm cùng cấp với file `.exe`
+
+> ⚠️ **Lưu ý**: Windows Defender có thể cảnh báo khi chạy file `.exe` từ nguồn không xác định. Chọn **"Run anyway"** để tiếp tục. 
+
+### 🐍 Phương Án 2: Chạy từ Source Code Python
+
+**Yêu cầu:**
+- Python 3.10 hoặc 3.11
+- pip (Python package manager)
+
+**Các bước thực hiện:**
+
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/TinyTech-67311/MummyMaze.git
+   cd MummyMaze
+   ```
+
+2. **Tạo virtual environment** (khuyến nghị)
+   ```bash
+   python -m venv venv
+   
+   # Windows
+   venv\Scripts\activate
+   
+   # macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. **Cài đặt dependencies**
+   ```bash
+   pip install pygame
+   ```
+
+4. **Chạy game**
+   ```bash
+   python main.py
+   ```
+
+---
 
