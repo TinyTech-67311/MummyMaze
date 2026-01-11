@@ -20,8 +20,6 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
 |-----------|-----------|----------|
 | **Python** | 3.12+ | Ngôn ngữ lập trình chính |
 | **Pygame** | 2.5.2 | Thư viện đồ họa và xử lý game |
-| **Công cụ** | - | Công cụ hỗ trợ code game |
-| **JSON** | Built-in | Lưu trữ dữ liệu user và progress |
 | **Git/GitHub** | - | Quản lý mã nguồn và version control |
 
 ---
