@@ -7,7 +7,7 @@ Dự án được thực hiện bởi nhóm **Nhóm 10** - Khóa K25 - Môn Cơ 
 - Ngô Phạm Hồng Thức - 25122044
 - Hà Chí Tâm - 25122039
 - Huỳnh Văn Phú - 25122036
-- Đặng Lê Hưng Thịnh - 25122040
+- Đặng Lê Hưng Thịnh - 25122042
 
 ## 📖 Giới Thiệu (Overview)
 **Mummy Maze** là dự án tái hiện tựa game giải đố kinh điển của PopCap.  Trong game, người chơi vào vai nhà thám hiểm **Explorer** bị kẹt trong kim tự tháp bí ẩn và phải tìm đường thoát ra ngoài trong khi tránh những xác ướp (Enemy/Mummy) đang rình rập.
