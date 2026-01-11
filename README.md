@@ -85,7 +85,7 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
 
 > Trước khi khởi động Game, chúng ta hãy cài đặt Git Bash để clone repository về máy.
 
-### Cài đặt Git Bash
+### Cài đặt Git
 
 **Bước 1: Tải bộ cài đặt**
 ```bash
@@ -111,15 +111,17 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
 
 1. **Clone repository về máy bằng Git Bash**
    ```bash
-   Khởi động Git Bash và gõ câu lệnh sau:
-   git clone https://github.com/TinyTech-67311/MummyMaze.git
+   - Mở Git Bash trong thư mục bạn muốn đặt game:
+   - Gõ: git clone https://github.com/TinyTech-67311/MummyMaze.git
    ```
 2. **Khởi động Game**
    ```bash
    Bước 1: Trên cửa sổ Git Bash đó, hãy vào thư mục Mummy Maze bằng cách gõ câu lệnh sau:
    cd Mummy Maze
    Bước 2: Khởi động Game, hãy gõ câu lệnh sau:
-   start MummyMaze.exe
+   - Đảm bảo đường dẫn hiển thị trên màn hình git bash là đường dẫn chứa file MummyMaze.exe
+         Gõ: start MummyMaze.exe
+   - Hoặc chúng ta có thể mở thư mục và tìm file MummyMaze.exe rồi Double Click
    ```
 ### 🐍 Phương Án 2: Chạy từ Source Code Python
 
@@ -131,9 +133,9 @@ Mỗi bước di chuyển của người chơi sẽ kích hoạt lượt đi c�
 
 1. **Clone repository về máy bằng Git Bash**
    ```bash
-   Khởi động Git Bash và gõ những câu lệnh sau:
-   git clone https://github.com/TinyTech-67311/MummyMaze.git
-   cd MummyMaze/source
+   - Mở Git Bash trong thư mục bạn muốn đặt game 
+   - Gõ: git clone https://github.com/TinyTech-67311/MummyMaze.git
+   - Gõ: cd MummyMaze/source
    ```
 
 2. **Tạo virtual environment** (khuyến nghị)
